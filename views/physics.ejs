@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Physics Course - Kinematics</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <header>
+            <a href="/login" class="sign-in-button">Sign In</a>
+            <a href="/logout" class="sign-in-button">Log Out</a> 
+        <a href="/" class="home-button">Home</a>
+        <div class="language-switcher">
+            <a href="#" class="lang" id="en">EN</a>
+            <a href="#" class="lang" id="ar">FI</a>
+        </div>
+    </header>
+    <!-- Container specifically for the physics page might use 'container-physics' class if defined for vertical layout -->
+    <div class="course-container">
+        <!-- Main interactive button for "Kinematics" -->
+        <div class="main-button" id="kinematics">Kinematics</div>
+        
+        <!-- Sub-buttons that will be shown when the main button is clicked -->
+        <div class="sub-button" style="display:none;">Subtopic 1</div>
+        <div class="sub-button" style="display:none;">Subtopic 2</div>
+        <div class="sub-button" style="display:none;">Subtopic 3</div>
+        <!-- Add more sub-buttons as needed -->
+    </div>
+
+    <!-- Script to handle the dropdown and hover effects -->
+    <script>
+        // Get the main button element
+        var mainButton = document.getElementById('kinematics');
+
+        // Add click event listener to main button
+        mainButton.addEventListener('click', function() {
+            // Get all sub-buttons within the container
+            var subButtons = document.querySelectorAll('.sub-button');
+
+            // Toggle display and initiate transitions for each sub-button
+            subButtons.forEach(function(button) {
+                if(button.style.opacity === "0" || button.style.opacity === "") {
+                    button.style.opacity = "1";
+                    button.style.transform = 'translateY(0px)'; // Normal position
+                    button.style.display = "flex"; // Make sure the button is visible
+                } else {
+                    button.style.opacity = "0";
+                    button.style.transform = 'translateY(20px)'; // Lower position
+                    setTimeout(() => { button.style.display = "none"; }, 300); // Hide after transition
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <!-- No Sign In or Dashboard button as this is the login page -->
+        <a href="/" class="home-button">Home</a>
+        <div class="language-switcher">
+            <a href="#" class="lang" id="en">EN</a>
+            <a href="#" class="lang" id="ar">FI</a>
+        </div>
+    </header>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="/auth" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-button">Sign In</button>
+        </form>
+    </div>
+</body>
+</html>

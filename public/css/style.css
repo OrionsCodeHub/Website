@@ -1,0 +1,247 @@
+/* Base reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: url('/images/stars_background.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: white; /* Adjust as needed */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+/* Navigation Buttons Styles */
+.sign-in-button, .dashboard-button, .home-button {
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #ff9100; /* Example color */
+    color: white;
+    text-decoration: none;
+    margin-right: 20px; /* Adjust spacing between buttons */
+}
+
+.home-button {
+    background-color: #ff008c; /* Example color */
+}
+
+/* Language Selector Styles */
+.language-switcher {
+    margin-left: auto; /* Push the language switcher to the right */
+    display: flex;
+}
+
+#buttonhome{
+width: 70px;
+}
+
+.lang {
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #ff004c; /* Example color */
+    color: white;
+    margin: 0 10px; /* Spacing between language buttons */
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+/* Global Container Styles */
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height or adjust as needed */
+    /* Other styles... */
+}
+
+/* Course Squares Styles */
+.tab {
+    width: 220px; /* Adjust size as needed */
+    height: 400px; /* Adjust size as needed */
+    margin: 10px;
+    border-radius: 60px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+.tab:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#physics {
+    background-image: url('/images/physics.png');
+}
+
+#math {
+    background-image: url('/images/math.png');
+}
+
+#chemistry {
+    background-image: url('/images/chemistry.png');
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .language-switcher {
+        margin-top: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .tab {
+        width: 80%; /* Adjust for smaller screens */
+        margin: 10px 0;
+    }
+}
+
+/* Styles for Physics Course Page */
+/* Specific container for Physics page to control layout */
+.course-container {
+    display: flex;
+    flex-direction: column; /* Ensures vertical stacking for this specific page */
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Adjust based on your design needs */
+}
+
+/* Main button on the Physics page */
+.main-button {
+    width: 60%; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    color: white; /* Text color */
+    border-radius: 15px; /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    margin-bottom: 10px; /* Space below the button */
+}
+
+.main-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+    transform: translateY(-5px); /* Slight raise effect */
+}
+
+/* Sub-button styles */
+.sub-button {
+    width: 50%; /* Smaller width than the main button */
+    height: 50px; /* Adjust height as needed */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    color: white; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px auto; /* Margin for vertical spacing */
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    /* Initially hidden but ready for flex display */
+    opacity: 0; 
+    transform: translateY(20px);
+    display: flex; /* Change from none to flex to enable transition */
+}
+
+.sub-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+}
+
+/* User Dashboard Styles */
+
+.user-name-box {
+    background-color: #ffd000; /* Example color - medium dark */
+    color: rgb(255, 255, 255);
+    padding: 35px;
+    margin: 50px;
+    border-radius: 40px;
+    width: 500px; /* Adjust as needed */
+    text-align: left; /* Left align text */
+    position: relative; /* Below the header */
+    top: 60px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+}
+
+/* Dashboard Statistics Styling */
+.dashboard-statistics {
+    display: flex;
+    justify-content: space-around; /* Distributes the boxes evenly with space around */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    padding: 20px; /* Padding inside the container */
+    margin: 20px 0; /* Margin outside the container */
+}
+
+.stat-box {
+    flex: 1; /* Allows boxes to grow and fill the space */
+    min-width: 200px; /* Minimum width for each box */
+    margin: 10px; /* Space between boxes */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 30px; /* Rounded corners for the box */
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth effect for hover */
+    height: 400px; /* Adjust as needed */
+    text-align: center;
+    /* Add box-shadow if desired for depth effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Stat Box Styles */
+#stat1 {
+    background-color: rgba(102, 102, 255, 0.1); /* Blueish color with transparency */
+}
+
+#stat2 {
+    background-color: rgba(102, 102, 255, 0.1); /* Blueish color with transparency */
+}
+
+#stat3 {
+    background-color: rgba(102, 102, 255, 0.1); /* Blueish color with transparency */
+}
+
+.stat-box:hover {
+    transform: scale(1.05); /* Grows the box slightly on hover */
+    background-color: lighten(color, 10%); /* Lighten on hover, adjust color as needed */
+}
+
+@media (max-width: 768px) {
+    .dashboard-statistics {
+        flex-direction: column;
+    }
+    .stat-box {
+        width: 100%; /* Full width for smaller screens */
+        margin: 10px 0; /* Adjusted margin for vertical layout */
+    }
+}
